@@ -7,8 +7,8 @@ public class ServiceStation {
             }
             car.checkEngine();
         } else if (truck != null) {
-            System.out.println("Обслуживаем " + truck.modelName);
-            for (int i = 0; i < truck.wheelsCount; i++) {
+            System.out.println("Обслуживаем " + truck.getModelName());
+            for (int i = 0; i < truck.getWheelsCount(); i++) {
                 truck.updateTyre();
             }
             truck.checkEngine();
