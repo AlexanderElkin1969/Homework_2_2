@@ -14,12 +14,8 @@ public class Main {
         truck.wheelsCount = 6;
         truck2.wheelsCount = 8;
 
-        Bicycle bicycle = new Bicycle();
-        Bicycle bicycle2 = new Bicycle();
-        bicycle.modelName = "bicycle1";
-        bicycle2.modelName = "bicycle2";
-        bicycle.wheelsCount = 2;
-        bicycle2.wheelsCount = 2;
+        Bicycle bicycle = new Bicycle("bicycle1", 2);
+        Bicycle bicycle2 = new Bicycle("bicycle2", 2);
 
         ServiceStation station = new ServiceStation();
         station.check(car, null, null);
