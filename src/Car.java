@@ -1,4 +1,4 @@
-public class Car {
+public class Car implements ServicedTransport {
 
     private final String modelName;
     private final int wheelsCount;
@@ -8,19 +8,20 @@ public class Car {
         this.wheelsCount = wheelsCount;
     }
 
-    public String getModelName() {
-        return modelName;
-    }
-
-    public int getWheelsCount() {
-        return wheelsCount;
-    }
-
     public void updateTyre() {
         System.out.println("Меняем покрышку");
     }
 
     public void checkEngine() {
         System.out.println("Проверяем двигатель");
+    }
+
+    @Override
+    public void check() {
+        System.out.println("Обслуживаем " + modelName);
+        for (int i = 0; i < wheelsCount; i++) {
+            updateTyre();
+        }
+        checkEngine();
     }
 }
